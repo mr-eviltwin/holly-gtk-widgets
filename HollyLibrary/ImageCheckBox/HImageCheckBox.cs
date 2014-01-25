@@ -10,7 +10,8 @@ using Gdk;
 
 namespace HollyLibrary
 {
-	
+
+	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HImageCheckBox : Gtk.Bin
 	{
 		

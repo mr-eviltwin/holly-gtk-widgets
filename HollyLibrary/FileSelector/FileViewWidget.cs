@@ -15,7 +15,8 @@ namespace HollyLibrary
 	{
 		Thumbnail, Tiles, List
 	}
-	
+
+	[System.ComponentModel.ToolboxItem(true)]
 	public class FileViewWidget : Gtk.Bin
 	{
 		ScrolledWindow view    = new ScrolledWindow();

@@ -10,7 +10,7 @@ using Gtk;
 
 namespace HollyLibrary
 {
-	
+	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HDateEdit : Gtk.Bin
 	{
 		//events
@@ -21,7 +21,8 @@ namespace HollyLibrary
 		DateTime currentDate                      = DateTime.Now;
 		Gdk.Color errorColor                      = new Gdk.Color( 255, 0, 0 );
 		Gdk.Color NormalColor                     = new Gdk.Color( 255, 255, 255 );
-		
+		private bool clockVisible				  = true;
+
 		public HDateEdit()
 		{
 			this.Build();
@@ -39,7 +40,7 @@ namespace HollyLibrary
 			this.ParentWindow.GetPosition( out x, out y );	
 			x += this.Allocation.Left;
 			y += this.Allocation.Top + this.Allocation.Height;
-			DateEditDialog.ShowMe( x, y, currentDate, OnPopupDateChanged );
+			DateEditDialog.ShowMe( x, y, currentDate, clockVisible, OnPopupDateChanged );
 		}
 		
 		private void OnPopupDateChanged( object sender, DateEventArgs args)
@@ -143,6 +144,31 @@ namespace HollyLibrary
 			set
 			{
 				customFormat = value;
+			}
+		}
+
+
+		public bool IsEditableEntry 
+		{
+			get 
+			{
+				return comboBox.Entry.IsEditable;
+			}
+			set
+			{
+				comboBox.Entry.IsEditable = value;
+			}
+		}
+
+		public bool IsVisibleClock 
+		{
+			get 
+			{
+				return clockVisible;
+			}
+			set
+			{
+				clockVisible = value;
 			}
 		}
 

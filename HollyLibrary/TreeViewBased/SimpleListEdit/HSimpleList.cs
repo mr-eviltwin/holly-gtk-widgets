@@ -13,6 +13,7 @@ using System.Drawing.Drawing2D;
 namespace HollyLibrary
 {
 
+	[System.ComponentModel.ToolboxItem(true)]
 	public class HSimpleList : TreeView, IBaseListWidget, ICustomCellTreeView
 	{
 		//my standard properties

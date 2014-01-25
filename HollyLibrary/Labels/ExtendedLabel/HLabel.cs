@@ -15,7 +15,8 @@ namespace HollyLibrary
 	{
 		Top, Bottom, Left, Right, TopLeft, TopRight, BottomLeft, BottomRight, Center
 	}
-	
+
+	[System.ComponentModel.ToolboxItem(true)]
 	public class HLabel : Label
 	{
 		Gdk.Pixbuf icon;

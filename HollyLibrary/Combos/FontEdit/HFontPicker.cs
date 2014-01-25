@@ -10,7 +10,8 @@ using System.Drawing;
 namespace HollyLibrary
 {
 	public delegate void FontEventHandler(object sender, FontEventArgs args);
-	
+
+	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HFontPicker : Gtk.Bin
 	{
 			

@@ -7,7 +7,7 @@ using System;
 namespace HollyLibrary
 {
 	
-	
+	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HComboTree : Gtk.Bin
 	{
 		//events

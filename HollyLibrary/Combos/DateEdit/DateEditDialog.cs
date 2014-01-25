@@ -34,24 +34,28 @@ namespace HollyLibrary
 
 		public event DateEventHandler OnChange = null;
 		
-		public DateEditDialog( int x, int y, DateTime defDate, DateEventHandler handler ) : base(Gtk.WindowType.Popup)
+		public DateEditDialog (int x, int y, DateTime defDate, bool clockVisible, DateEventHandler handler) : base(Gtk.WindowType.Popup)
 		{	
-			this.Move( x, y );
-			this.Build();
-			this.OnChange  = handler;
-			GrabUtil.GrabWindow(this);
+			this.Move (x, y);
+			this.Build ();
+			this.OnChange = handler;
+			GrabUtil.GrabWindow (this);
 
-			TxtHour.Value  = defDate.Hour;
-			TxtMin.Value   = defDate.Minute;
-			TxtSec.Value   = defDate.Second;
+			TxtHour.Value = defDate.Hour;
+			TxtMin.Value = defDate.Minute;
+			TxtSec.Value = defDate.Second;
 			CCalendar.Date = defDate;
 			
-			RefreshClock();
+			if (!clockVisible) {
+				Clock.Hide ();
+			} else {
+				RefreshClock();
+			}
 		}
 		
-		public static void ShowMe( int x, int y, DateTime defDate, DateEventHandler handler )
+		public static void ShowMe( int x, int y, DateTime defDate, bool clockVisible, DateEventHandler handler )
 		{
-			new DateEditDialog( x, y, defDate, handler );
+			new DateEditDialog( x, y, defDate, clockVisible, handler );
 		}
 
 		protected override bool OnExposeEvent (Gdk.EventExpose args)

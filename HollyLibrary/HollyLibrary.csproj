@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84A93C86-5017-48E1-92C7-CFAF25BF6CDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HollyLibrary</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ConsolePause>false</ConsolePause>
+    <Execution>
+      <Execution clr-version="Net_2_0" />
+    </Execution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Execution>
+      <Execution clr-version="Net_2_0" />
+    </Execution>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GrabUtil.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HDateEdit.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.DateEditDialog.cs" />
+    <Compile Include="WinUtil.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.FontChooserDialog.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HFontPicker.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HBaseComboBox.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HSimpleComboBox.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.ComboListWindow.cs" />
+    <Compile Include="RegExEntry\HRegExEntry.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HRegExEntry.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.ColorPickerDialog.cs" />
+    <Compile Include="Tooltip\HToolTip.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HToolTip.cs" />
+    <Compile Include="IpEntry\HIpEntry.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HIpEntry.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HComboTree.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.TreePopupDialog.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HComboFolder.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.FolderChooserDialog.cs" />
+    <Compile Include="Combos\ComboEdit\HBaseComboBox.cs" />
+    <Compile Include="Combos\ComboFolder\FolderChooserDialog.cs" />
+    <Compile Include="Combos\ComboFolder\HComboFolder.cs" />
+    <Compile Include="Combos\ColorPicker\ColorChangeEventArgs.cs" />
+    <Compile Include="Combos\ColorPicker\ColorPickerDialog.cs" />
+    <Compile Include="Combos\ComboTree\HComboTree.cs" />
+    <Compile Include="Combos\ComboTree\TreePopupDialog.cs" />
+    <Compile Include="Combos\DateEdit\AnalogClock.cs" />
+    <Compile Include="Combos\DateEdit\DateEditDialog.cs" />
+    <Compile Include="Combos\DateEdit\DateTimeFormatTypeEnum.cs" />
+    <Compile Include="Combos\DateEdit\HDateEdit.cs" />
+    <Compile Include="Combos\FontEdit\FontChooserDialog.cs" />
+    <Compile Include="Combos\FontEdit\HFontPicker.cs" />
+    <Compile Include="Combos\SimpleComboBox\ComboListWindow.cs" />
+    <Compile Include="Combos\SimpleComboBox\HSimpleComboBox.cs" />
+    <Compile Include="TreeViewBased\TreeView\HTreeNode.cs" />
+    <Compile Include="TreeViewBased\TreeView\HTreeView.cs" />
+    <Compile Include="TreeViewBased\TreeView\NodeCollection.cs" />
+    <Compile Include="TreeViewBased\TreeView\Events\NodeEventList.cs" />
+    <Compile Include="TreeViewBased\SimpleListEdit\HSimpleList.cs" />
+    <Compile Include="TreeViewBased\SimpleListEdit\ObjectCollection.cs" />
+    <Compile Include="TreeViewBased\SimpleListEdit\Events\DrawItemEventArgs.cs" />
+    <Compile Include="TreeViewBased\SimpleListEdit\Events\ListEventHandlers.cs" />
+    <Compile Include="TreeViewBased\SimpleListEdit\Events\MeasureItemEventArgs.cs" />
+    <Compile Include="TreeViewBased\CellRendererCustom.cs" />
+    <Compile Include="TreeViewBased\ICustomCellTreeView.cs" />
+    <Compile Include="TreeViewBased\TreeView\Events\NodeEventArgs.cs" />
+    <Compile Include="TreeViewBased\IBaseListWidget.cs" />
+    <Compile Include="Dialogs\ColorPicker\VerticalColorSlider.cs" />
+    <Compile Include="Dialogs\ColorPicker\ColorPanel.cs" />
+    <Compile Include="Dialogs\ColorPicker\HColorPickerWidget.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HColorPickerWidget.cs" />
+    <Compile Include="Combos\ColorPicker\HColorPicker.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HColorPicker.cs" />
+    <Compile Include="Dialogs\ColorPicker\HColorPickerDialog.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HColorPickerDialog.cs" />
+    <Compile Include="ImageCheckBox\HImageCheckBox.cs" />
+    <Compile Include="gtk-gui\HollyLibrary.HImageCheckBox.cs" />
+    <Compile Include="Combos\ColorPicker\ColorButton.cs" />
+    <Compile Include="Labels\ExtendedLabel\HLabel.cs" />
+    <Compile Include="FileSelector\FileViewWidget.cs" />
+    <Compile Include="TreeViewBased\Table\HTable.cs" />
+    <Compile Include="Common\GtkControl.cs" />
+    <Compile Include="Common\GtkControlEventArgs.cs" />
+    <Compile Include="Common\GtkControlEvents.cs" />
+    <Compile Include="GraphicsUtil\CairoUtil.cs" />
+    <Compile Include="GraphicsUtil\GraphUtil.cs" />
+    <Compile Include="GraphicsUtil\ExDrawable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gtk-gui\objects.xml">
+      <LogicalName>objects.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drive.png" />
+    <EmbeddedResource Include="folder.png" />
+    <EmbeddedResource Include="HTreeView.png" />
+    <EmbeddedResource Include="HSimpleList.png" />
+    <EmbeddedResource Include="HSimpleComboBox.png" />
+    <EmbeddedResource Include="HRegExEntry.png" />
+    <EmbeddedResource Include="HLabel.png" />
+    <EmbeddedResource Include="HIpEntry.png" />
+    <EmbeddedResource Include="HImageCheckBox.png" />
+    <EmbeddedResource Include="HFontPicker.png" />
+    <EmbeddedResource Include="HDateEdit.png" />
+    <EmbeddedResource Include="HComboTree.png" />
+    <EmbeddedResource Include="HComboFolder.png" />
+    <EmbeddedResource Include="HColorPicker.png" />
+    <EmbeddedResource Include="HColorPickerPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RegExEntry\" />
+    <Folder Include="Tooltip\" />
+    <Folder Include="IpEntry\" />
+    <Folder Include="Combos\" />
+    <Folder Include="TreeViewBased\" />
+    <Folder Include="Dialogs\" />
+    <Folder Include="Dialogs\ColorPicker\" />
+    <Folder Include="ImageCheckBox\" />
+    <Folder Include="TreeViewBased\Table\" />
+    <Folder Include="TreeViewBased\Table\Editors\" />
+    <Folder Include="TreeViewBased\Table\Renderers\" />
+    <Folder Include="TreeViewBased\Table\Models\" />
+    <Folder Include="TreeViewBased\Table\Events\" />
+    <Folder Include="TreeViewBased\Table\Sorting\" />
+    <Folder Include="Common\" />
+    <Folder Include="GraphicsUtil\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="Mono.Cairo" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gtk-dotnet, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-dotnet-2.0</Package>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <GtkDesignInfo generateGettext="false" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

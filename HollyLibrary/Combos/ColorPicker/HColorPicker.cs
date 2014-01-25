@@ -7,7 +7,7 @@ using System;
 namespace HollyLibrary
 {
 	
-	
+	[System.ComponentModel.ToolboxItem(true)]
 	public partial class HColorPicker : Gtk.Bin
 	{
 		//color change event
